@@ -1,0 +1,87 @@
+//buildscript {
+//    repositories {
+//        maven { url 'https://firebase.maven.repository.oss.sonatype.org/' }
+//        google()
+//    }
+//    dependencies {
+//
+//        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.5'
+//    }
+//}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+
+    signingConfigs {
+        config {
+            keyAlias 'mykey'
+            keyPassword 'PO0F3S1A'
+            storeFile file('keystore/android.jks')
+            storePassword 'BC23P7T1'
+        }
+    }
+    namespace 'com.example.contactapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.contactapp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+}
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.firebase:firebase-firestore:24.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'com.google.firebase:firebase-database:20.2.0'
+    implementation 'com.google.firebase:firebase-auth:21.3.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.github.natasam:DemoProgressViewsLibApp:5843c69b44'
+    implementation 'com.github.GwonHyeok:StickySwitch:0.0.15'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    implementation 'com.github.AlbertGrobas:PolygonImageView:3a2b07f768@aar'
+    implementation 'com.weiwangcn.betterspinner:library-material:1.1.0'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+    implementation 'com.github.jinatonic.confetti:confetti:1.1.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    implementation 'com.github.markushi:circlebutton:1.1'
+    implementation 'com.github.woxingxiao:BubbleSeekBar:3.20'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.BelkaLab:Android-Toggle-Switch:af08b92682'
+    implementation 'com.robinhood.spark:spark:1.2.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.6'
+    implementation 'com.google.firebase:firebase-analytics:21.2.2'
+    implementation 'com.google.gms:google-services:4.3.15'
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+}

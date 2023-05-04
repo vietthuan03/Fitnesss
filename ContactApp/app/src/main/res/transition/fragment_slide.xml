@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidx="http://schemas.android.com/tools">
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"
+        androidx:duration="1000" />
+</slide>
