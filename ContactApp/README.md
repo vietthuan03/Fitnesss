@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/icon.png" width=280</p>
+<p align="center"><img src="assets/icon.jpg" width=280</p>
 <h2 align="center"><b>Fitz - Fitness Android App</b></h2>
 <h4 align="center">An android application focused on achieving fitness and health goals in a more convenient way.</h4>
 
